@@ -17,7 +17,7 @@
  * under certain conditions.
  */
  
- 
+
 -- Agitated Green Sand Crab
 SET @ENTRY := 40238;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;

@@ -1,101 +1,80 @@
--- Evicted Soul
-SET @ENTRY := 59974;
+-- Krik'thik Bombardier
+SET @ENTRY := 56706;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,0,0,100,0,5000,8000,12000,15000,11,115309,0,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Evicted Soul');
+(@ENTRY,0,0,0,0,0,100,0,5000,8000,12000,15000,11,106866,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Bombardment');
 
--- Frenzied Spirit
-SET @ENTRY := 60033;
+-- Krik'thik Conscript
+SET @ENTRY := 61213;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,2,0,100,0,0,40,15000,17000,11,115524,2,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Frenzied Spirit at 40% HP');
+(@ENTRY,0,0,0,2,0,100,1,0,30,0,0,11,118777,0,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Frenzy at 30% HP'),
+(@ENTRY,0,1,0,0,0,100,0,8000,8000,12000,15000,11,118787,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Resin Burst'),
+(@ENTRY,0,2,0,0,0,100,0,4000,4000,10000,10000,11,118795,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Resin Residue');
 
--- Fuel Tank
-SET @ENTRY := 59706;
+-- Krik'thik Disruptor
+SET @ENTRY := 59794;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,1,0,100,0,20000,25000,120000,125000,11,114875,0,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Fuel Barrel on Spawn');
+(@ENTRY,0,0,0,0,0,100,0,5000,8000,12000,15000,11,115455,0,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Acid Bomb');
 
--- Pile of Corpses
-SET @ENTRY := 59722;
+-- Krik'thik Infiltrator
+SET @ENTRY := 56890;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,1,0,100,0,10000,15000,60000,65000,11,114951,0,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Pile of Corpses on Spawn');
+(@ENTRY,0,0,0,0,0,100,0,8000,8000,15000,15000,11,128829,0,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Smoke Bomb');
 
--- Scarlet Centurion
-SET @ENTRY := 59746;
+-- Krik'thik Infiltrator
+SET @ENTRY := 58108;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,0,0,100,0,5000,5000,12000,15000,11,115519,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Cleave'),
-(@ENTRY,0,1,0,0,0,100,0,10000,10000,16000,22000,11,115511,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Retaliation');
+(@ENTRY,0,0,0,0,0,100,0,8000,8000,15000,15000,11,128829,0,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Smoke Bomb');
 
--- Scarlet Fanatic
-SET @ENTRY := 58555;
+-- Krik'thik Protectorate
+SET @ENTRY := 56929;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,0,0,100,0,8000,8000,15000,15000,11,110956,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Fanatical Strike'),
-(@ENTRY,0,1,0,2,0,100,0,0,55,22000,25000,11,110954,2,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Hands of Purity at 55% HP');
+(@ENTRY,0,0,0,2,0,100,1,0,30,0,0,11,107314,2,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Hive Mind at 30% HP');
 
--- Scarlet Flamethrower
-SET @ENTRY := 59705;
+-- Krik'thik Rager
+SET @ENTRY := 59800;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,0,0,100,0,0,0,2500,3500,11,115506,64,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Flamethrower');
+(@ENTRY,0,0,0,2,0,100,1,0,30,0,0,11,115430,0,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Enrage at 30% HP'),
+(@ENTRY,0,1,0,0,0,100,0,5000,8000,12000,15000,11,115436,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Savage Cleave');
 
--- Scarlet Initiate
-SET @ENTRY := 58783;
+-- Krik'thik Saboteur
+SET @ENTRY := 60447;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,0,0,100,0,0,0,3400,4700,11,114855,64,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Smite'),
-(@ENTRY,0,1,0,2,0,100,1,0,15,0,0,25,0,0,0,0,0,0,1,0,0,0,0,0,0,0,'Flee at 15% HP'),
-(@ENTRY,0,2,0,2,0,100,0,0,40,22000,25000,11,111008,2,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Heal at 40% HP'),
-(@ENTRY,0,3,0,14,0,100,0,400,40,15000,18000,11,111008,0,0,0,0,0,7,0,0,0,0,0,0,0,'Cast Heal on Friendlies');
+(@ENTRY,0,0,0,0,0,100,0,0,0,2500,3200,11,116633,64,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Bombard');
 
--- Scarlet Judicator
-SET @ENTRY := 58605;
+-- Krik'thik Sapper
+SET @ENTRY := 56876;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,0,0,100,0,5000,8000,12000,15000,11,111107,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Pass Judgment');
+(@ENTRY,0,0,0,0,0,100,0,5000,8000,12000,15000,11,107094,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Sabotage');
 
--- Scarlet Purifier
-SET @ENTRY := 58569;
+-- Krik'thik Swarm Bringer
+SET @ENTRY := 56930;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,0,0,100,0,0,0,3400,4700,11,110968,64,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Purifying Flames'),
-(@ENTRY,0,1,0,2,0,100,1,0,15,0,0,25,0,0,0,0,0,0,1,0,0,0,0,0,0,0,'Flee at 15% HP'),
-(@ENTRY,0,2,0,0,0,100,0,5000,8000,12000,15000,11,110963,2,0,0,0,0,4,0,0,0,0,0,0,0,'Cast Flamestrike');
+(@ENTRY,0,0,0,0,0,100,0,5000,6000,15000,17000,11,111600,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Screeching Swarm');
 
--- Scarlet Sentry
-SET @ENTRY := 4283;
+-- Krik'thik Wind Shaper
+SET @ENTRY := 59801;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
 DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
 INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,0,0,100,0,5000,8000,12000,15000,11,215377,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast The Maw Must Feed');
-
--- Scarlet Zealot
-SET @ENTRY := 58590;
-UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,0,0,100,0,0,0,3400,4700,11,114855,64,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Smite'),
-(@ENTRY,0,1,0,2,0,100,1,0,15,0,0,25,0,0,0,0,0,0,1,0,0,0,0,0,0,0,'Flee at 15% HP'),
-(@ENTRY,0,2,0,2,0,100,0,0,40,22000,25000,11,111008,2,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Heal at 40% HP'),
-(@ENTRY,0,3,0,14,0,100,0,400,40,15000,18000,11,111008,0,0,0,0,0,7,0,0,0,0,0,0,0,'Cast Heal on Friendlies');
-
--- Spirit of Redemption
-SET @ENTRY := 58592;
-UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `source_type`=0 AND `entryorguid`=@ENTRY;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,2,0,100,0,0,40,22000,25000,11,111024,2,0,0,0,0,1,0,0,0,0,0,0,0,'Cast Heal at 40% HP'),
-(@ENTRY,0,1,0,14,0,100,0,400,40,15000,18000,11,111024,0,0,0,0,0,7,0,0,0,0,0,0,0,'Cast Heal on Friendlies');
+(@ENTRY,0,0,0,0,0,100,0,8000,8000,15000,16000,11,115419,0,0,0,0,0,4,0,0,0,0,0,0,0,'Cast Gale Force'),
+(@ENTRY,0,1,0,0,0,100,0,5000,8000,12000,15000,11,115418,0,0,0,0,0,2,0,0,0,0,0,0,0,'Cast Wind Blast');

@@ -1,2 +1,2 @@
-UPDATE `version` SET `db_version`=('CataCoreDB 434.04 updates & "patch" SmartAI Lab 434.12 "Deathwing Madness"');
+-- "patch" SmartAI Lab 548.02 "Shado-Pan Monastery"
 
